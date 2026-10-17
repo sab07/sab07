@@ -1,5 +1,790 @@
 ## Hi there 👋
+<body class="bg-slate-50 dark:bg-darkBg text-slate-800 dark:text-slate-100 transition-colors duration-300 antialiased overflow-x-hidden">
 
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress" class="fixed top-0 right-0 h-1 bg-gradient-to-l from-pink-500 via-purple-500 to-indigo-500 z-50 transition-all duration-150" style="width: 0%;"></div>
+
+    <!-- 1. Header / Navbar -->
+    <header class="fixed top-0 left-0 right-0 z-40 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-indigo-600 via-purple-600 to-pink-500 flex items-center justify-center text-white shadow-lg shadow-indigo-500/30 group-hover:rotate-12 transition-transform duration-300">
+                        <i class="fa-solid font-black text-xl fa-bolt"></i>
+                    </div>
+                    <span class="text-2xl font-extrabold bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 bg-clip-text text-transparent">
+                        إبتكــــار
+                    </span>
+                </a>
+
+                <!-- Desktop Nav Links -->
+                <nav class="hidden md:flex items-center gap-1 bg-white/60 dark:bg-slate-900/60 p-1.5 rounded-full border border-slate-200/50 dark:border-slate-800/80 backdrop-blur-md shadow-sm">
+                    <a href="#hero" class="px-5 py-2 text-sm font-semibold rounded-full text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-950/50 transition-all">الرئيسية</a>
+                    <a href="#services" class="px-5 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 rounded-full transition-all">خدماتنا</a>
+                    <a href="#portfolio" class="px-5 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 rounded-full transition-all">أعمالنا</a>
+                    <a href="#testimonials" class="px-5 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 rounded-full transition-all">آراء العملاء</a>
+                    <a href="#contact" class="px-5 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 rounded-full transition-all">تواصل معنا</a>
+                </nav>
+
+                <!-- Actions: Dark Mode Toggle & CTA Button -->
+                <div class="hidden md:flex items-center gap-4">
+                    <!-- Theme Toggle Button -->
+                    <button id="theme-toggle" class="w-10 h-10 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-amber-400 flex items-center justify-center hover:ring-2 hover:ring-indigo-500 transition-all">
+                        <i class="fa-solid fa-moon text-lg dark:hidden"></i>
+                        <i class="fa-solid fa-sun text-lg hidden dark:block"></i>
+                    </button>
+
+                    <a href="#contact" class="px-6 py-2.5 rounded-xl font-bold text-sm text-white bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 hover:shadow-lg hover:shadow-purple-500/30 hover:scale-[1.02] active:scale-95 transition-all duration-200">
+                        ابدأ مشروعك
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="flex items-center gap-3 md:hidden">
+                    <button id="theme-toggle-mobile" class="w-10 h-10 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-amber-400 flex items-center justify-center">
+                        <i class="fa-solid fa-moon text-lg dark:hidden"></i>
+                        <i class="fa-solid fa-sun text-lg hidden dark:block"></i>
+                    </button>
+
+                    <button id="mobile-menu-btn" class="text-2xl text-slate-700 dark:text-slate-200 focus:outline-none p-2">
+                        <i class="fa-solid fa-bars-staggered"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white/95 dark:bg-slate-900/95 border-b border-slate-200 dark:border-slate-800 backdrop-blur-xl transition-all">
+            <div class="px-4 pt-3 pb-6 space-y-3">
+                <a href="#hero" class="block px-4 py-3 rounded-xl font-bold bg-indigo-50 dark:bg-indigo-950/50 text-indigo-600 dark:text-indigo-400">الرئيسية</a>
+                <a href="#services" class="block px-4 py-3 rounded-xl font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">خدماتنا</a>
+                <a href="#portfolio" class="block px-4 py-3 rounded-xl font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">أعمالنا</a>
+                <a href="#testimonials" class="block px-4 py-3 rounded-xl font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">آراء العملاء</a>
+                <a href="#contact" class="block px-4 py-3 rounded-xl font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">تواصل معنا</a>
+                
+                <a href="#contact" class="block text-center w-full py-3 mt-4 rounded-xl font-bold text-white bg-gradient-to-r from-indigo-600 to-pink-500 shadow-md">
+                    ابدأ مشروعك الآن
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. Hero Section -->
+    <section id="hero" class="relative pt-32 pb-20 md:pt-44 md:pb-32 overflow-hidden">
+        <!-- Background Glowing Blobs -->
+        <div class="absolute top-1/4 right-10 w-72 h-72 md:w-96 md:h-96 bg-purple-500/20 dark:bg-purple-600/20 rounded-full blur-3xl -z-10 animate-pulse-slow"></div>
+        <div class="absolute bottom-10 left-10 w-72 h-72 md:w-96 md:h-96 bg-pink-500/20 dark:bg-pink-600/20 rounded-full blur-3xl -z-10 animate-pulse-slow" style="animation-delay: 2s;"></div>
+        <div class="absolute top-1/3 left-1/3 w-80 h-80 bg-indigo-500/15 dark:bg-indigo-600/15 rounded-full blur-3xl -z-10"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Text Content -->
+                <div class="lg:col-span-7 text-center lg:text-right">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-pink-500/10 border border-purple-500/20 text-purple-600 dark:text-purple-300 font-semibold text-sm mb-6">
+                        <span class="flex h-2 w-2 rounded-full bg-pink-500 animate-ping"></span>
+                        <span>مستقبل التجربة الرقمية والابتكار</span>
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 dark:text-white leading-tight lg:leading-tight mb-6">
+                        نحّول خيالك إلى <br>
+                        <span class="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 bg-clip-text text-transparent animate-gradient-x">
+                            واقع رقمي مبهر
+                        </span>
+                    </h1>
+
+                    <p class="text-lg sm:text-xl text-slate-600 dark:text-slate-300 leading-relaxed mb-8 max-w-2xl mx-auto lg:mx-0">
+                        نبتكر حلولاً متكاملة لتصميم وتطوير المواقع والأنظمة الذكية، بنقش فني جذاب وحلول تقنية فائقة الدقة تساعد علامتك التجارية على التحليق بعيداً.
+                    </p>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <a href="#portfolio" class="w-full sm:w-auto px-8 py-4 rounded-2xl font-bold text-white bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 shadow-xl shadow-purple-500/25 hover:shadow-purple-500/40 hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-3">
+                            <span>استكشف مشاريعنا</span>
+                            <i class="fa-solid fa-arrow-left"></i>
+                        </a>
+
+                        <a href="#services" class="w-full sm:w-auto px-8 py-4 rounded-2xl font-bold text-slate-700 dark:text-slate-200 bg-white/80 dark:bg-slate-800/80 hover:bg-slate-100 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 transition-all flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-circle-play text-indigo-500"></i>
+                            <span>خدماتنا المتميزة</span>
+                        </a>
+                    </div>
+
+                    <!-- Counter Stats -->
+                    <div class="grid grid-cols-3 gap-6 mt-12 pt-8 border-t border-slate-200 dark:border-slate-800/80">
+                        <div>
+                            <p class="text-3xl font-black text-indigo-600 dark:text-indigo-400">+150</p>
+                            <p class="text-sm font-medium text-slate-500 dark:text-slate-400 mt-1">مشروع ناجح</p>
+                        </div>
+                        <div>
+                            <p class="text-3xl font-black text-purple-600 dark:text-purple-400">%99</p>
+                            <p class="text-sm font-medium text-slate-500 dark:text-slate-400 mt-1">رضا العملاء</p>
+                        </div>
+                        <div>
+                            <p class="text-3xl font-black text-pink-600 dark:text-pink-400">+8</p>
+                            <p class="text-sm font-medium text-slate-500 dark:text-slate-400 mt-1">سنوات خبرة</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Graphic / Illustration Card -->
+                <div class="lg:col-span-5 relative flex justify-center">
+                    <div class="relative w-full max-w-md animate-float">
+                        <!-- Colored Background Halo -->
+                        <div class="absolute inset-0 bg-gradient-to-tr from-indigo-500 to-pink-500 rounded-3xl blur-2xl opacity-40"></div>
+                        
+                        <!-- Main Card -->
+                        <div class="relative rounded-3xl p-6 glass border border-white/40 dark:border-slate-700/50 shadow-2xl space-y-6">
+                            
+                            <!-- Card Header -->
+                            <div class="flex items-center justify-between pb-4 border-b border-slate-200/50 dark:border-slate-700/50">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-xl bg-indigo-500/20 text-indigo-600 dark:text-indigo-400 flex items-center justify-center font-bold">
+                                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-bold text-sm">لوحة التحكم الفائقة</h3>
+                                        <p class="text-xs text-slate-500 dark:text-slate-400">تحديثات مباشرة ومباشرة</p>
+                                    </div>
+                                </div>
+                                <span class="flex h-3 w-3 relative">
+                                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                                  <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+                                </span>
+                            </div>
+
+                            <!-- Graphic Chart Fake Elements -->
+                            <div class="space-y-4">
+                                <div class="p-4 rounded-2xl bg-gradient-to-r from-indigo-500/10 to-purple-500/10 border border-indigo-500/20">
+                                    <div class="flex justify-between text-xs font-bold mb-2">
+                                        <span>نسبة إنجاز المشاريع</span>
+                                        <span class="text-indigo-600 dark:text-indigo-400">94%</span>
+                                    </div>
+                                    <div class="w-full bg-slate-200 dark:bg-slate-700 h-2.5 rounded-full overflow-hidden">
+                                        <div class="bg-gradient-to-r from-indigo-500 to-purple-500 h-full rounded-full" style="width: 94%"></div>
+                                    </div>
+                                </div>
+
+                                <div class="grid grid-cols-2 gap-3">
+                                    <div class="p-4 rounded-2xl bg-slate-100/80 dark:bg-slate-800/80">
+                                        <i class="fa-solid fa-chart-line text-pink-500 mb-2 text-xl"></i>
+                                        <p class="text-xs text-slate-500 dark:text-slate-400">نمو الزوار</p>
+                                        <p class="text-lg font-extrabold text-slate-800 dark:text-white">+142%</p>
+                                    </div>
+                                    <div class="p-4 rounded-2xl bg-slate-100/80 dark:bg-slate-800/80">
+                                        <i class="fa-solid fa-shield-halved text-emerald-500 mb-2 text-xl"></i>
+                                        <p class="text-xs text-slate-500 dark:text-slate-400">الأمان والتشفير</p>
+                                        <p class="text-lg font-extrabold text-slate-800 dark:text-white">100%</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Floating badge -->
+                            <div class="absolute -bottom-5 -right-5 bg-white dark:bg-slate-800 p-4 rounded-2xl shadow-xl border border-slate-100 dark:border-slate-700 flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-amber-500/20 text-amber-500 flex items-center justify-center font-bold">
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-slate-500 dark:text-slate-400">التقييم العام</p>
+                                    <p class="font-bold text-sm">4.9 / 5.0 نجمة</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Services Section -->
+    <section id="services" class="py-24 relative bg-slate-100/70 dark:bg-slate-900/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Section Title -->
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-extrabold uppercase tracking-widest text-indigo-600 dark:text-indigo-400 mb-2">خدماتنا المتميزة</h2>
+                <h3 class="text-3xl sm:text-4xl font-black text-slate-900 dark:text-white mb-4">نقدم أفضل الحلول الرقمية لتنمية أعمالك</h3>
+                <div class="w-20 h-1.5 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 mx-auto rounded-full"></div>
+            </div>
+
+            <!-- Services Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Service Card 1 -->
+                <div class="group relative bg-white dark:bg-darkCard p-8 rounded-3xl border border-slate-200/80 dark:border-slate-800 shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-indigo-500/10 rounded-bl-full group-hover:scale-110 transition-transform"></div>
+                    <div class="w-16 h-16 rounded-2xl bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 flex items-center justify-center text-2xl mb-6 group-hover:bg-indigo-600 group-hover:text-white transition-colors duration-300">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">تطوير المواقع والتطبيقات</h4>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-sm">
+                        تصميم وتطوير مواقع إلكترونية متجاوبة، سريعة وأمنة بالكامل باستخدام أحدث تقنيات البرمجة العصرية.
+                    </p>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="group relative bg-white dark:bg-darkCard p-8 rounded-3xl border border-slate-200/80 dark:border-slate-800 shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-purple-500/10 rounded-bl-full group-hover:scale-110 transition-transform"></div>
+                    <div class="w-16 h-16 rounded-2xl bg-purple-500/10 text-purple-600 dark:text-purple-400 flex items-center justify-center text-2xl mb-6 group-hover:bg-purple-600 group-hover:text-white transition-colors duration-300">
+                        <i class="fa-solid fa-palette"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">تصميم تجربة المستخدم UI/UX</h4>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-sm">
+                        واجهات جذابة وسهلة الاستخدام ترتكز على دراسة سلوك المستخدم لضمان أفضل تجربة تصفح ممكنة.
+                    </p>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="group relative bg-white dark:bg-darkCard p-8 rounded-3xl border border-slate-200/80 dark:border-slate-800 shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-pink-500/10 rounded-bl-full group-hover:scale-110 transition-transform"></div>
+                    <div class="w-16 h-16 rounded-2xl bg-pink-500/10 text-pink-600 dark:text-pink-400 flex items-center justify-center text-2xl mb-6 group-hover:bg-pink-600 group-hover:text-white transition-colors duration-300">
+                        <i class="fa-solid fa-bullhorn"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3 group-hover:text-pink-600 dark:group-hover:text-pink-400 transition-colors">التسويق الرقمي والهوية</h4>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-sm">
+                        بناء هوية بصرية فريدة وخطط تسويقية مبنية على البيانات لتعزيز حضورك الرقمي وزيادة مبيعاتك.
+                    </p>
+                </div>
+
+                <!-- Service Card 4 -->
+                <div class="group relative bg-white dark:bg-darkCard p-8 rounded-3xl border border-slate-200/80 dark:border-slate-800 shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-emerald-500/10 rounded-bl-full group-hover:scale-110 transition-transform"></div>
+                    <div class="w-16 h-16 rounded-2xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-2xl mb-6 group-hover:bg-emerald-600 group-hover:text-white transition-colors duration-300">
+                        <i class="fa-solid fa-store"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">إنشاء المتاجر الإلكترونية</h4>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-sm">
+                        تصميم متاجر متكاملة تدعم بوابة الدفع والشحن المباشر لتوفير رحلة شراء سلسة لعملائك.
+                    </p>
+                </div>
+
+                <!-- Service Card 5 -->
+                <div class="group relative bg-white dark:bg-darkCard p-8 rounded-3xl border border-slate-200/80 dark:border-slate-800 shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-amber-500/10 rounded-bl-full group-hover:scale-110 transition-transform"></div>
+                    <div class="w-16 h-16 rounded-2xl bg-amber-500/10 text-amber-600 dark:text-amber-400 flex items-center justify-center text-2xl mb-6 group-hover:bg-amber-600 group-hover:text-white transition-colors duration-300">
+                        <i class="fa-solid fa-magnifying-glass-chart"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3 group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors">تحسين محركات البحث SEO</h4>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-sm">
+                        تهيئـة موقعك الإلكتروني ليتصدر نتائج البحث الأولى في جوجل لضمان وصول العملاء المستهدفين.
+                    </p>
+                </div>
+
+                <!-- Service Card 6 -->
+                <div class="group relative bg-white dark:bg-darkCard p-8 rounded-3xl border border-slate-200/80 dark:border-slate-800 shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-cyan-500/10 rounded-bl-full group-hover:scale-110 transition-transform"></div>
+                    <div class="w-16 h-16 rounded-2xl bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 flex items-center justify-center text-2xl mb-6 group-hover:bg-cyan-600 group-hover:text-white transition-colors duration-300">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3 group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">الدعم والصيانة الفنية</h4>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-sm">
+                        متابعة دائرية ومستمرة لموقعك وحل كافة المشاكل الفنية وضمان عمل السيرفرات بأقصى كفاءة.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Portfolio Section -->
+    <section id="portfolio" class="py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Section Header -->
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <h2 class="text-xs font-extrabold uppercase tracking-widest text-indigo-600 dark:text-indigo-400 mb-2">معرض أعمالنا</h2>
+                    <h3 class="text-3xl sm:text-4xl font-black text-slate-900 dark:text-white">مشاريع افتخرنا بإنجازها</h3>
+                </div>
+
+                <!-- Filter Buttons -->
+                <div class="flex flex-wrap gap-2 mt-6 md:mt-0" id="portfolio-filters">
+                    <button data-filter="all" class="px-5 py-2 rounded-xl text-sm font-bold bg-gradient-to-r from-indigo-600 to-purple-600 text-white shadow-md transition-all filter-btn active">الكل</button>
+                    <button data-filter="web" class="px-5 py-2 rounded-xl text-sm font-bold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all filter-btn">مواقع إلكترونية</button>
+                    <button data-filter="app" class="px-5 py-2 rounded-xl text-sm font-bold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all filter-btn">تطبيقات</button>
+                    <button data-filter="branding" class="px-5 py-2 rounded-xl text-sm font-bold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all filter-btn">هوية بصرية</button>
+                </div>
+            </div>
+
+            <!-- Grid Items -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="portfolio-items">
+                
+                <!-- Project Item 1 -->
+                <div class="portfolio-item web group rounded-3xl overflow-hidden bg-white dark:bg-darkCard border border-slate-200 dark:border-slate-800 shadow-md hover:shadow-2xl transition-all duration-300">
+                    <div class="relative overflow-hidden aspect-video">
+                        <div class="w-full h-full bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 flex items-center justify-center text-white text-5xl font-black group-hover:scale-110 transition-transform duration-500">
+                            <i class="fa-solid fa-store"></i>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <span class="text-xs bg-indigo-600 text-white px-3 py-1 rounded-full font-bold">موقع متجر ذكي</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-bold text-indigo-500">متاجر إلكترونية</span>
+                        <h4 class="text-xl font-bold mt-1 text-slate-900 dark:text-white">منصة تسوق متكاملة</h4>
+                        <p class="text-slate-500 dark:text-slate-400 text-sm mt-2">تصميم وتطوير متجر متعدد البائعين مع دعم أساليب الدفع الحديثة.</p>
+                    </div>
+                </div>
+
+                <!-- Project Item 2 -->
+                <div class="portfolio-item app group rounded-3xl overflow-hidden bg-white dark:bg-darkCard border border-slate-200 dark:border-slate-800 shadow-md hover:shadow-2xl transition-all duration-300">
+                    <div class="relative overflow-hidden aspect-video">
+                        <div class="w-full h-full bg-gradient-to-br from-emerald-400 via-teal-500 to-indigo-600 flex items-center justify-center text-white text-5xl font-black group-hover:scale-110 transition-transform duration-500">
+                            <i class="fa-solid fa-mobile-screen-button"></i>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <span class="text-xs bg-emerald-600 text-white px-3 py-1 rounded-full font-bold">تطبيق جوال</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-bold text-emerald-500">تطبيقات الهواتف</span>
+                        <h4 class="text-xl font-bold mt-1 text-slate-900 dark:text-white">تطبيق الصحة واللياقة</h4>
+                        <p class="text-slate-500 dark:text-slate-400 text-sm mt-2">تطبيق يتابع التمارين اليومية مع إحصائيات بصرية وسريعة الاستجابة.</p>
+                    </div>
+                </div>
+
+                <!-- Project Item 3 -->
+                <div class="portfolio-item branding group rounded-3xl overflow-hidden bg-white dark:bg-darkCard border border-slate-200 dark:border-slate-800 shadow-md hover:shadow-2xl transition-all duration-300">
+                    <div class="relative overflow-hidden aspect-video">
+                        <div class="w-full h-full bg-gradient-to-br from-amber-400 via-orange-500 to-pink-600 flex items-center justify-center text-white text-5xl font-black group-hover:scale-110 transition-transform duration-500">
+                            <i class="fa-solid fa-compass-drafting"></i>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <span class="text-xs bg-amber-600 text-white px-3 py-1 rounded-full font-bold">تصميم هوية</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-bold text-amber-500">هوية تجارية</span>
+                        <h4 class="text-xl font-bold mt-1 text-slate-900 dark:text-white">هوية شركة مقاولات</h4>
+                        <p class="text-slate-500 dark:text-slate-400 text-sm mt-2">تصميم الشعار والدليل الإرشادي الكامل للهوية الموحدة.</p>
+                    </div>
+                </div>
+
+                <!-- Project Item 4 -->
+                <div class="portfolio-item web group rounded-3xl overflow-hidden bg-white dark:bg-darkCard border border-slate-200 dark:border-slate-800 shadow-md hover:shadow-2xl transition-all duration-300">
+                    <div class="relative overflow-hidden aspect-video">
+                        <div class="w-full h-full bg-gradient-to-br from-blue-500 via-cyan-500 to-indigo-700 flex items-center justify-center text-white text-5xl font-black group-hover:scale-110 transition-transform duration-500">
+                            <i class="fa-solid fa-chart-pie"></i>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <span class="text-xs bg-blue-600 text-white px-3 py-1 rounded-full font-bold">منصة تحليل</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-bold text-cyan-500">تطبيقات الويب</span>
+                        <h4 class="text-xl font-bold mt-1 text-slate-900 dark:text-white">لوحة تحكم إدارة البيانات</h4>
+                        <p class="text-slate-500 dark:text-slate-400 text-sm mt-2">نظام كامل لإدارة وتحليل البيانات المالية للمؤسسات الكبرى.</p>
+                    </div>
+                </div>
+
+                <!-- Project Item 5 -->
+                <div class="portfolio-item app group rounded-3xl overflow-hidden bg-white dark:bg-darkCard border border-slate-200 dark:border-slate-800 shadow-md hover:shadow-2xl transition-all duration-300">
+                    <div class="relative overflow-hidden aspect-video">
+                        <div class="w-full h-full bg-gradient-to-br from-rose-500 via-pink-500 to-purple-600 flex items-center justify-center text-white text-5xl font-black group-hover:scale-110 transition-transform duration-500">
+                            <i class="fa-solid fa-utensils"></i>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <span class="text-xs bg-pink-600 text-white px-3 py-1 rounded-full font-bold">تطبيق مطاعم</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-bold text-pink-500">تطبيقات الجوال</span>
+                        <h4 class="text-xl font-bold mt-1 text-slate-900 dark:text-white">تطبيق طلب المأكولات</h4>
+                        <p class="text-slate-500 dark:text-slate-400 text-sm mt-2">تطبيق توصيل سريع مع خريطة تتبع مباشرة للطلب حتى وصوله.</p>
+                    </div>
+                </div>
+
+                <!-- Project Item 6 -->
+                <div class="portfolio-item branding group rounded-3xl overflow-hidden bg-white dark:bg-darkCard border border-slate-200 dark:border-slate-800 shadow-md hover:shadow-2xl transition-all duration-300">
+                    <div class="relative overflow-hidden aspect-video">
+                        <div class="w-full h-full bg-gradient-to-br from-violet-600 via-purple-600 to-indigo-800 flex items-center justify-center text-white text-5xl font-black group-hover:scale-110 transition-transform duration-500">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <span class="text-xs bg-violet-600 text-white px-3 py-1 rounded-full font-bold">هوية تعليمية</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-bold text-violet-500">علامة تجارية</span>
+                        <h4 class="text-xl font-bold mt-1 text-slate-900 dark:text-white">هوية أكاديمية رقمية</h4>
+                        <p class="text-slate-500 dark:text-slate-400 text-sm mt-2">ابتكار المفهوم البصري والشعارات المخصصة لمنصة تعليمية حديثة.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Testimonials Section -->
+    <section id="testimonials" class="py-24 bg-slate-100/70 dark:bg-slate-900/40 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-extrabold uppercase tracking-widest text-indigo-600 dark:text-indigo-400 mb-2">ثقة شركائنا</h2>
+                <h3 class="text-3xl sm:text-4xl font-black text-slate-900 dark:text-white mb-4">ماذا يقول عملاؤنا عنا؟</h3>
+                <div class="w-20 h-1.5 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 mx-auto rounded-full"></div>
+            </div>
+
+            <!-- Cards Container -->
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <!-- Testimonial 1 -->
+                <div class="bg-white dark:bg-darkCard p-8 rounded-3xl border border-slate-200/80 dark:border-slate-800 shadow-lg relative flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 gap-1 text-sm mb-4">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-sm mb-6">
+                            "تعامل احترافي للغاية والتزام تام بالمواعيد. النتيجة كانت متجراً إلكترونياً يتجاوز توقعاتنا بجماله وسرعته."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-4 pt-4 border-t border-slate-100 dark:border-slate-800">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-indigo-500 to-purple-500 flex items-center justify-center text-white font-bold text-lg">
+                            أ
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 dark:text-white text-sm">أحمد الشمري</h4>
+                            <p class="text-xs text-slate-400">الرئيس التنفيذي - متجر الفخامة</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-white dark:bg-darkCard p-8 rounded-3xl border border-slate-200/80 dark:border-slate-800 shadow-lg relative flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 gap-1 text-sm mb-4">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-sm mb-6">
+                            "الفريق مبدع جداً في جلب أفكار جديدة وحلول تصميمة عصرية للواجهات. حقق التطبيق تفاعلاً واسعاً منذ إطلاقه!"
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-4 pt-4 border-t border-slate-100 dark:border-slate-800">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-pink-500 to-rose-500 flex items-center justify-center text-white font-bold text-lg">
+                            س
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 dark:text-white text-sm">سارة القحطاني</h4>
+                            <p class="text-xs text-slate-400">مديرة التسويق - منصة تواصل</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-white dark:bg-darkCard p-8 rounded-3xl border border-slate-200/80 dark:border-slate-800 shadow-lg relative flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 gap-1 text-sm mb-4">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-sm mb-6">
+                            "خدمة دعم متواصلة وحلول استثنائية للمشاكل البرمجية المعقدة. التوافق العالي والتصميم المضيء جعلنا نعتمد عليهم دائماً."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-4 pt-4 border-t border-slate-100 dark:border-slate-800">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-emerald-500 to-teal-500 flex items-center justify-center text-white font-bold text-lg">
+                            م
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 dark:text-white text-sm">محمد المنصوري</h4>
+                            <p class="text-xs text-slate-400">مؤسس - حلول الأعمال الذكية</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Contact Us Section -->
+    <section id="contact" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Contact Info -->
+                <div class="lg:col-span-5 space-y-8">
+                    <div>
+                        <h2 class="text-xs font-extrabold uppercase tracking-widest text-indigo-600 dark:text-indigo-400 mb-2">تواصل معنا</h2>
+                        <h3 class="text-3xl sm:text-4xl font-black text-slate-900 dark:text-white mb-4">هل لديك مشروع ترغب في تنفيذه؟</h3>
+                        <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-sm">
+                            نحن هنا لمساعدتك في بناء فكرتك وتحويلها إلى واقع ملموس. اتصل بنا أو قم بتعبئة النموذج وسنرد عليك في أقرب وقت.
+                        </p>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-4 p-4 rounded-2xl bg-slate-100/80 dark:bg-slate-800/80 border border-slate-200/50 dark:border-slate-700/50">
+                            <div class="w-12 h-12 rounded-xl bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-sm text-slate-900 dark:text-white">المقر الرئيسي</h5>
+                                <p class="text-xs text-slate-500 dark:text-slate-400">الرياض، المملكة العربية السعودية</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 p-4 rounded-2xl bg-slate-100/80 dark:bg-slate-800/80 border border-slate-200/50 dark:border-slate-700/50">
+                            <div class="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-600 dark:text-purple-400 flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-sm text-slate-900 dark:text-white">البريد الإلكتروني</h5>
+                                <p class="text-xs text-slate-500 dark:text-slate-400">info@ebtikar-solutions.com</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 p-4 rounded-2xl bg-slate-100/80 dark:bg-slate-800/80 border border-slate-200/50 dark:border-slate-700/50">
+                            <div class="w-12 h-12 rounded-xl bg-pink-500/10 text-pink-600 dark:text-pink-400 flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-sm text-slate-900 dark:text-white">الهاتف والواتساب</h5>
+                                <p class="text-xs text-slate-500 dark:text-slate-400" dir="ltr">+966 50 000 0000</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form Card -->
+                <div class="lg:col-span-7">
+                    <div class="p-8 sm:p-10 rounded-3xl bg-white dark:bg-darkCard border border-slate-200 dark:border-slate-800 shadow-xl relative overflow-hidden">
+                        
+                        <h4 class="text-2xl font-bold text-slate-900 dark:text-white mb-6">أرسل لنا رسالة</h4>
+
+                        <form id="contactForm" onsubmit="handleFormSubmit(event)" class="space-y-6">
+                            <div class="grid sm:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-2">الاسم الكامل</label>
+                                    <input type="text" required="" placeholder="مثال: محمد علي" class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all text-sm">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-2">البريد الإلكتروني</label>
+                                    <input type="email" required="" placeholder="name@domain.com" class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all text-sm">
+                                </div>
+                            </div>
+
+                            <div class="grid sm:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-2">رقم الهاتف</label>
+                                    <input type="tel" placeholder="0500000000" class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all text-sm">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-2">نوع الخدمة المطلوبة</label>
+                                    <select class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all text-sm">
+                                        <option>تصوير وتطوير موقع</option>
+                                        <option>تطبيق جوال</option>
+                                        <option>تصميم هوية بصرية</option>
+                                        <option>استشارة رقمية</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-2">تفاصيل المشروع</label>
+                                <textarea rows="4" required="" placeholder="اكتب تفاصيل مشروعك هنا..." class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all text-sm resize-none"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full py-4 rounded-xl font-bold text-white bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 hover:shadow-lg hover:shadow-purple-500/30 hover:scale-[1.01] active:scale-95 transition-all text-sm">
+                                إرسال الرسالة الآن
+                            </button>
+                        </form>
+
+                        <!-- Toast Message Alert (Hidden by default) -->
+                        <div id="formToast" class="hidden mt-4 p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-600 dark:text-emerald-400 text-center text-sm font-bold">
+                            <i class="fa-solid fa-circle-check ml-2"></i> تم إرسال رسالتك بنجاح! سوف نتواصل معك قريباً.
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Footer Section -->
+    <footer class="bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800/80 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
+                
+                <!-- Brand Info -->
+                <div class="lg:col-span-2 space-y-4">
+                    <a href="#" class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-indigo-600 to-pink-500 flex items-center justify-center text-white shadow-md">
+                            <i class="fa-solid fa-bolt"></i>
+                        </div>
+                        <span class="text-2xl font-black bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 bg-clip-text text-transparent">إبتكــــار</span>
+                    </a>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed max-w-sm">
+                        مؤسسة متخصصة في ابتكار الحلول البرمجية الفائقة والتصميم الرقمي المتطور لمساعدة الشركات على النهوض والتميز.
+                    </p>
+                    <div class="flex gap-3 pt-2">
+                        <a href="#" class="w-9 h-9 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 flex items-center justify-center hover:bg-indigo-600 hover:text-white transition-colors">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-9 h-9 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 flex items-center justify-center hover:bg-indigo-600 hover:text-white transition-colors">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-9 h-9 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 flex items-center justify-center hover:bg-indigo-600 hover:text-white transition-colors">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-9 h-9 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 flex items-center justify-center hover:bg-indigo-600 hover:text-white transition-colors">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Column 2 Links -->
+                <div>
+                    <h5 class="font-bold text-slate-900 dark:text-white text-sm mb-4">روابط سريعة</h5>
+                    <ul class="space-y-2.5 text-sm text-slate-500 dark:text-slate-400">
+                        <li><a href="#hero" class="hover:text-indigo-500 transition-colors">الرئيسية</a></li>
+                        <li><a href="#services" class="hover:text-indigo-500 transition-colors">خدماتنا</a></li>
+                        <li><a href="#portfolio" class="hover:text-indigo-500 transition-colors">معرض الأعمال</a></li>
+                        <li><a href="#testimonials" class="hover:text-indigo-500 transition-colors">آراء العملاء</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3 Links -->
+                <div>
+                    <h5 class="font-bold text-slate-900 dark:text-white text-sm mb-4">الخدمات</h5>
+                    <ul class="space-y-2.5 text-sm text-slate-500 dark:text-slate-400">
+                        <li><a href="#" class="hover:text-indigo-500 transition-colors">تطوير المواقع</a></li>
+                        <li><a href="#" class="hover:text-indigo-500 transition-colors">تطبيقات الجوال</a></li>
+                        <li><a href="#" class="hover:text-indigo-500 transition-colors">تصميم UI/UX</a></li>
+                        <li><a href="#" class="hover:text-indigo-500 transition-colors">الهويات البصرية</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4 Newsletter -->
+                <div>
+                    <h5 class="font-bold text-slate-900 dark:text-white text-sm mb-4">النشرة البريدية</h5>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mb-3">اشترك للحصول على أحدث المقالات والنصائح التقنية.</p>
+                    <div class="flex gap-2">
+                        <input type="email" placeholder="بريدك..." class="w-full px-3 py-2 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        <button class="px-4 py-2 bg-indigo-600 text-white rounded-xl text-xs font-bold hover:bg-indigo-700 transition-colors">اشترك</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Bottom Copyright -->
+            <div class="pt-8 border-t border-slate-100 dark:border-slate-900 text-center text-xs text-slate-500 dark:text-slate-400">
+                <p>© جميع الحقوق محفوظة لـ منصة إبتكار 2026</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Scripts -->
+    <script>
+        // 1. Dark Mode Toggle Script
+        const themeToggleBtns = [document.getElementById('theme-toggle'), document.getElementById('theme-toggle-mobile')];
+        
+        // System preference or previous setting
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+
+        themeToggleBtns.forEach(btn => {
+            if(btn) {
+                btn.addEventListener('click', () => {
+                    document.documentElement.classList.toggle('dark');
+                    if (document.documentElement.classList.contains('dark')) {
+                        localStorage.setItem('theme', 'dark');
+                    } else {
+                        localStorage.setItem('theme', 'light');
+                    }
+                });
+            }
+        });
+
+        // 2. Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // 3. Scroll Progress & Sticky Header Glass Effect
+        const navbar = document.getElementById('navbar');
+        const progressBar = document.getElementById('scroll-progress');
+
+        window.addEventListener('scroll', () => {
+            // Scroll Progress
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            progressBar.style.width = scrolled + "%";
+
+            // Header Background on Scroll
+            if (window.scrollY > 20) {
+                navbar.classList.add('glass', 'shadow-md');
+            } else {
+                navbar.classList.remove('glass', 'shadow-md');
+            }
+        });
+
+        // 4. Portfolio Filter Logic
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active state style
+                filterBtns.forEach(b => {
+                    b.classList.remove('bg-gradient-to-r', 'from-indigo-600', 'to-purple-600', 'text-white', 'shadow-md');
+                    b.classList.add('bg-slate-100', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-300');
+                });
+
+                btn.classList.remove('bg-slate-100', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-300');
+                btn.classList.add('bg-gradient-to-r', 'from-indigo-600', 'to-purple-600', 'text-white', 'shadow-md');
+
+                const filter = btn.getAttribute('data-filter');
+
+                portfolioItems.forEach(item => {
+                    if (filter === 'all' || item.classList.contains(filter)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // 5. Contact Form Submission Handling
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const toast = document.getElementById('formToast');
+            toast.classList.remove('hidden');
+            
+            // Reset form
+            document.getElementById('contactForm').reset();
+
+            // Hide Toast after 4 seconds
+            setTimeout(() => {
+                toast.classList.add('hidden');
+            }, 4000);
+        }
+    </script>
+
+</body>
 <!--
 **sab07/sab07** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
